@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+    <title>Matthi House Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bitter';
+        }
+
+        body {
+            background: linear-gradient(135deg, #f9f5e9 0%, #f5eede 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .menu-container {
+            width: 800px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            padding: 30px;
+        }
+
+        /* Watermark styling */
+        .watermark {
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 0.15;
+            z-index: 2;
+            pointer-events: none;
+            text-align: center;
+            zoom: 170%;
+        }
+
+        .watermark img {
+            max-width: 400px;
+            filter: grayscale(100%) brightness(70%);
+            border: none;
+            /* Add this line */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 45px;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #d35400;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(to right, transparent, #8b4513, transparent);
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        th {
+            background-color: #8b4513;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fcf8f3;
+        }
+
+        tr:hover {
+            background-color: #f9f0e5;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: #8b4513;
+        }
+
+        .price {
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #5d6768;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge {
+            background-color: #8b4513;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 850px) {
+            .menu-container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .logo {
+                font-size: 32px;
+            }
+
+            .watermark img {
+                max-width: 300px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .watermark img {
+                max-width: 250px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            th,
+            td {
+                padding: 8px 5px;
+                font-size: 16px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <!-- Watermark -->
+        <div class="watermark">
+            <!-- Replace the src with your actual image path -->
+            <img src="logo.png" alt="Homemade Mathi's Watermark">
+        </div>
+
+        <div class="header">
+            <div class="logo">MATTHI HOUSE</div>
+            <div class="tagline">Your Snack, Our Tradition</div>
+            <div class="divider"></div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>250 gm</th>
+                    <th>500 gm</th>
+                    <th>1 kg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="product-name">Regular Matthi</td>
+                    <td class="price">₹ 130</td>
+                    <td class="price">₹ 250</td>
+                    <td class="price">₹ 500</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Cocktail Matthi</td>
+                    <td class="price">₹ 150</td>
+                    <td class="price">₹ 280</td>
+                    <td class="price">₹ 550</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Cocktail Kachori</td>
+                    <td class="price">₹ 160</td>
+                    <td class="price">₹ 330</td>
+                    <td class="price">₹ 620</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Namak Pada</td>
+                    <td class="price">₹ 130</td>
+                    <td class="price">₹ 250</td>
+                    <td class="price">₹ 500</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Gudd Pada</td>
+                    <td class="price">₹ 150</td>
+                    <td class="price">₹ 280</td>
+                    <td class="price">₹ 560</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Besan Pak</td>
+                    <td class="price">₹ 220</td>
+                    <td class="price">₹ 430</td>
+                    <td class="price">₹ 800</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Shakkar Pada</td>
+                    <td class="price">₹ 150</td>
+                    <td class="price">₹ 280</td>
+                    <td class="price">₹ 560</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Besan Kasoori Methi Matthi</td>
+                    <td class="price">₹ 170</td>
+                    <td class="price">₹ 320</td>
+                    <td class="price">₹ 620</td>
+                </tr>
+                <tr>
+                    <td class="product-name">Gudd Nimki</td>
+                    <td class="price">₹ 130</td>
+                    <td class="price">₹ 250</td>
+                    <td class="price">₹ 500</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="divider"></div>
+
+        <div class="footer">
+            <div><i class="fa fa-map-marker"></i> Matthi House, Gurgaon, Haryana</div>
+            <div class="contact-info">
+                <div><i class="fa fa-whatsapp"></i> +91 9305272506</div>
+                <div><i class="fa fa-instagram"></i> @matthi_house</div>
+                <div><i class="fa fa-clock-o"></i> Open: 10AM - 8PM <span class="badge">Monday To Saturday</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple function to demonstrate interactivity
+        document.addEventListener('DOMContentLoaded', function () {
+            const rows = document.querySelectorAll('tr');
+            rows.forEach(row => {
+                row.addEventListener('click', function () {
+                    this.style.backgroundColor = '#f3e5d8';
+                    setTimeout(() => {
+                        this.style.backgroundColor = '';
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

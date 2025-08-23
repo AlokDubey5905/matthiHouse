@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakkar Pada - Visiting Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e6d2b5 0%, #d9b98b 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .visiting-card {
+            width: 90mm;
+            /* Standard visiting card width */
+            height: 55mm;
+            /* Standard visiting card height */
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .card-left {
+            width: 65%;
+            padding: 8px 12px;
+            border-right: 1px dashed #d9b98b;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #ef3f32;
+        }
+
+        .card-right {
+            width: 35%;
+            padding: 8px 10px;
+            background: linear-gradient(to bottom, #ef3f32);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-header {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .section {
+            margin-bottom: 4px;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: #f5c4a1;
+            margin-bottom: 3px;
+            border-bottom: 1px solid #f3e5d8;
+            padding-bottom: 2px;
+        }
+
+        .ingredients {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-bottom: 5px;
+        }
+
+        .ingredient {
+            background: #e0b894;
+            color: #8b4513;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 9px;
+            font-weight: 500;
+        }
+
+        .product-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-bottom: 5px;
+        }
+
+        .detail-item {
+            background: #ebd8a6;
+            padding: 5px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid #f3e5d8;
+        }
+
+        .detail-label {
+            font-size: 8px;
+            color: #7f8c8d;
+            margin-bottom: 2px;
+        }
+
+        .detail-value {
+            font-size: 10px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .weight {
+            font-size: 12px;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .price {
+            font-size: 14px;
+            font-weight: bold;
+            color: #d35400;
+            margin: 3px 0;
+        }
+
+        .mrp {
+            font-size: 8px;
+            color: #7f8c8d;
+        }
+
+        .best-before {
+            display: inline-block;
+            background: #8b4513;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 8px;
+            margin-top: 5px;
+        }
+
+        .logo {
+            font-size: 12px;
+            font-weight: bold;
+            color: #f5c4a1;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 8px;
+            text-align: center;
+            color: #e0e7e8;
+        }
+
+        .contact-info div {
+            margin-bottom: 3px;
+        }
+
+        .icon {
+            color: #8b4513;
+            margin-right: 3px;
+        }
+
+        .circular-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1em;
+        }
+
+        .product-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-info h1 {
+            font-size: 21px;
+            font-weight: bold;
+            color: #f5c4a1;
+            margin-bottom: -5px;
+        }
+
+        .matthi-house-logo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .visiting-card {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="visiting-card">
+        <div class="card-left">
+            <div class="product-info">
+                <img src="besanPak.jpg" alt="Besan Pak" class="circular-image">
+                <h1>Shakkar Pada</h1>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Ingredients</h3>
+                <div class="ingredients">
+                    <span class="ingredient">Maida</span>
+                    <span class="ingredient">Pure Ghee</span>
+                    <span class="ingredient">Salt</span>
+                    <span class="ingredient">Sugar</span>
+                    <span class="ingredient">Suji</span>
+                    <span class="ingredient">Sunflower Oil</span>
+                </div>
+            </div>
+
+            <div class="product-details">
+                <div class="detail-item">
+                    <div class="detail-label">Net Weight</div>
+                    <div class="detail-value">1Kg</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">MRP</div>
+                    <div class="detail-value">₹560</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Shelf Life</div>
+                    <div class="detail-value">60 Days</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Packaging</div>
+                    <div class="detail-value">Box</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-right">
+
+            <div class="matthi-house-logo">
+                <img src="logo.png" alt="Matthi House Logo">
+            </div>
+
+            <div class="logo">MATTHI HOUSE</div>
+
+            <div class="contact-info">
+                <div><i class="fa fa-map-marker"></i> Gurgaon, Haryana</div>
+                <div><i class="fa fa-phone"></i> +91 9305272506</div>
+                <div><i class="fa fa-instagram"></i> @matthi_house</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
